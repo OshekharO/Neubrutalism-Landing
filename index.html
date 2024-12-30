@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mancrop Miru - Cross-platform Media Manager</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: #f0f0f0;
+            color: #333;
+            line-height: 1.6;
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .neu-box {
+            background-color: #fff;
+            border: 3px solid #000;
+            box-shadow: 5px 5px 0px #000;
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .neu-box:hover {
+            transform: translate(-5px, -5px);
+            box-shadow: 10px 10px 0px #000;
+        }
+
+        .neu-button {
+            background-color: #ff6b6b;
+            color: #fff;
+            border: 3px solid #000;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .neu-button:hover {
+            background-color: #ff8787;
+            transform: translate(-2px, -2px);
+            box-shadow: 4px 4px 0px #000;
+        }
+
+        #features-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #features-list li {
+            background-color: #4ecdc4;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 2px solid #000;
+        }
+
+        .stats {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            background-color: #ffe66d;
+            padding: 10px;
+            border: 2px solid #000;
+            flex: 1;
+            text-align: center;
+            min-width: 120px;
+            word-break: break-word;
+            font-size: 0.9rem;
+        }
+
+        .languages {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+
+        .language-tag {
+            background-color: #95a5a6;
+            color: white;
+            padding: 5px 10px;
+            border: 2px solid #000;
+            font-size: 14px;
+        }
+
+        /* New styles for navbar */
+        .navbar {
+            background-color: #4ecdc4;
+            padding: 10px 0;
+            border-bottom: 3px solid #000;
+        }
+
+        .navbar-container {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .navbar-logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #000;
+            text-decoration: none;
+        }
+
+        .navbar-menu {
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar-item {
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 5px 10px;
+            border: 2px solid #000;
+            background-color: #fff;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-item:hover {
+            background-color: #ff6b6b;
+            color: #fff;
+            transform: translate(-2px, -2px);
+            box-shadow: 4px 4px 0px #000;
+        }
+
+        .mobile-menu-button {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .navbar-menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                right: 0;
+                background-color: #4ecdc4;
+                border-top: 3px solid #000;
+                padding: 10px;
+            }
+
+            .navbar-menu.active {
+                display: flex;
+            }
+
+            .mobile-menu-button {
+                display: block;
+            }
+
+            .container {
+                padding: 10px;
+            }
+
+            .stats {
+                gap: 5px;
+            }
+
+            .stat-item {
+                min-width: 100px;
+                padding: 8px;
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#" class="navbar-logo">Mancrop Miru</a>
+            <button class="mobile-menu-button">☰</button>
+            <div class="navbar-menu">
+                <a href="#about" class="navbar-item">About</a>
+                <a href="#features" class="navbar-item">Features</a>
+                <a href="#platforms" class="navbar-item">Platforms</a>
+                <a href="#contribution" class="navbar-item">Contribute</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header class="neu-box">
+            <h1>Mancrop Miru</h1>
+            <p>A powerful cross-platform multi media application</p>
+            <div class="stats">
+                <div class="stat-item">6 Stars</div>
+                <div class="stat-item">1 Fork</div>
+                <div class="stat-item">17 Contributors</div>
+            </div>
+        </header>
+
+        <section id="about" class="neu-box">
+            <h2>About</h2>
+            <p>Mancrop Miru is an Free and open source multi-functional application that supports video, comics, novels extended source.</p>
+            <div class="languages">
+                <span class="language-tag">Dart 92.8%</span>
+                <span class="language-tag">C++ 3.6%</span>
+                <span class="language-tag">Swift 0.4%</span>
+                <span class="language-tag">Others 3.2%</span>
+            </div>
+        </section>
+
+        <section id="features" class="neu-box">
+            <h2>Features</h2>
+            <ul id="features-list">
+                <li>Cross-platform support</li>
+                <li>Download Support</li>
+                <li>Support For AniList Tracking</li>
+                <li>Metadata management for media files</li>
+            </ul>
+        </section>
+
+        <section id="platforms" class="neu-box">
+            <h2>Supported Platforms</h2>
+            <ul id="features-list">
+                <li>Android</li>
+                <li>Linux</li>
+                <li>Windows</li>
+            </ul>
+        </section>
+
+        <section id="contribution" class="neu-box">
+            <h2>Contribute</h2>
+            <p>Licensed under AGPL-3.0, Mancrop Miru welcomes contributions from the community!</p>
+            <div class="stats">
+                <div class="stat-item">AGPL-3.0</div>
+                <div class="stat-item">372 Commits</div>
+                <div class="stat-item">Active</div>
+            </div>
+            <div style="margin-top: 20px;">
+                <a href="https://github.com/Mancrop/mancrop-miru" class="neu-button">View on GitHub</a>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add some interactivity to neu-boxes
+            const neuBoxes = document.querySelectorAll('.neu-box');
+            neuBoxes.forEach(box => {
+                box.addEventListener('click', function() {
+                    this.style.backgroundColor = getRandomColor();
+                });
+            });
+
+            // Function to generate random color
+            function getRandomColor() {
+                const letters = '0123456789ABCDEF';
+                let color = '#';
+                for (let i = 0; i < 6; i++) {
+                    color += letters[Math.floor(Math.random() * 16)];
+                }
+                return color;
+            }
+
+            // Mobile menu toggle
+            const mobileMenuButton = document.querySelector('.mobile-menu-button');
+            const navbarMenu = document.querySelector('.navbar-menu');
+
+            mobileMenuButton.addEventListener('click', function() {
+                navbarMenu.classList.toggle('active');
+            });
+
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', function(event) {
+                const isClickInsideMenu = navbarMenu.contains(event.target);
+                const isClickOnMenuButton = mobileMenuButton.contains(event.target);
+
+                if (!isClickInsideMenu && !isClickOnMenuButton && navbarMenu.classList.contains('active')) {
+                    navbarMenu.classList.remove('active');
+                }
+            });
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
